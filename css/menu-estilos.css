@@ -1,0 +1,26 @@
+nav {
+  background-color: #333;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Centra los elementos de lista */
+}
+li {
+  display: inline-block; /* Cambia float: left por display: inline-block */
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+.titulo {
+  text-align: center;
+  color: white;
+}

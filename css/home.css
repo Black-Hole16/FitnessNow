@@ -1,0 +1,32 @@
+nav {
+  background-color: white;
+  text-align: center;
+}
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.menu li {
+  margin: 10px;
+}
+.menu li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+.menu li img {
+  width: 100px;
+  height: 100px;
+  /* border-radius: 50%; */
+}
+@media(max-width: 640px) {
+  .menu {
+    flex-wrap: wrap;
+  }
+  .menu li {
+    width: 50%;
+  }
+}
