@@ -9,6 +9,7 @@
 </head>
 <body>
      <iframe src="../menu.html" frameborder="0" width="100%" height="100%"></iframe>
+     <a href="../home-product.html"><img width="50px" height="50px" src="../assets/img/back.png " alt="Atras"></a>
      <form action="" method="post">
         <h1>Eliminar Producto</h1>
         <input type="number" name="N1" placeholder="Codigo de producto" required>
