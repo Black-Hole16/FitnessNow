@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Catalogo</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <iframe src="../menu.html" frameborder="0" width="100%" height="100%"></iframe>
+    <h1>Nuestros Productos</h1>
+    <a href="../home-product.html"><img width="50px" height="50px" src="../assets/img/back.png " alt="Atras"></a>
+</body>
+</html>
+<?php
+include("../conec.php");
+        $DB = new MySQL();
+
+        
+
+        $consulta = $DB->consulta("SELECT * FROM producto;");
+        if($DB->num_rows($consulta)>0){
+            echo "<html><table align=center border=1 cellpading=3<tr>";
+            # Costruye los encabezados
+            echo "
+            <th width='149'>Codigo</th>
+            <th width='211'>Nombre</th>
+            <th width='211'>Descripción</th>
+            <th width='145'>Precio Und</th>
+            <th width='138'>Presentación</th>
+            <th width='138'>Imagen</th>
+            </tr>
+            ";
+            while($resultado = $DB->fetch_array($consulta)){
+                // Mostrmos los datos en en celdas de la tabla html
+                echo "<tr>";
+                echo "<td>".$resultado[0]."</td>";
+                echo "<td>".$resultado[1]."</td>";
+                echo "<td>".$resultado[2]."</td>";
+                echo "<td>".$resultado[3]."</td>";
+                echo "<td>".$resultado[4]."</td>";
+                echo "<td><img src='".$resultado[5]."'width='100' height='100'></td>";
+                echo "</tr>";
+            };
+
+            echo "</table>";
+            
+        };    
+?>
+

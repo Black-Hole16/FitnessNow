@@ -1,0 +1,13 @@
+*{
+    text-align: center;
+    
+}
+
+body{
+    background-image:url("fondo.jpg");
+    background-color: azure;
+}
+
+table{
+    margin:auto ;
+}
