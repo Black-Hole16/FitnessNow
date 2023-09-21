@@ -9,7 +9,7 @@
 </head>
 <body>
      <form action="" method="post">
-        <h1>Regristar Usario</h1>
+        <h1>Regristarse</h1>
         <input type="number" name="N1" placeholder="Codigo de usuario"required>
         <br><br>
         <input type="text" name="Name" placeholder="Nombre de usuario" required>
