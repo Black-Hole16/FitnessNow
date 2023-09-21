@@ -9,6 +9,7 @@
 </head>
 <body>
      <iframe src="../menu.html" frameborder="0" width="100%" height="100%"></iframe>
+     <a href="../home-product.html"><img width="50px" height="50px" src="../assets/img/back.png " alt="Atras"></a>
     <form action="" method="post" enctype="multipart/form-data">
         <h1>Regristar Producto</h1>
         <input type="number" name="N1" placeholder="Codigo de Producto" required>
@@ -21,7 +22,7 @@
         <br><br>
         <input type="text" name="Presentacion-prod" placeholder="Presentacion producto" required>
         <br><br>
-        <input type="file" name="imag-prod" placeholder="Imagen de producto" required>
+        <input type="file" name="imag-prod" placeholder="Imagen de producto">
         <br><br>
         <input type="submit" value="Guardar" name="Btn">
 </form>
