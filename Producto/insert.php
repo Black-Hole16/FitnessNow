@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-     <iframe src="../menu.html" frameborder="0" width="100%" height="100%"></iframe>
+     <iframe src="../menu.html" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
      <a href="../home-product.html"><img width="50px" height="50px" src="../assets/img/back.png " alt="Atras"></a>
     <form action="" method="post" enctype="multipart/form-data">
         <h1>Regristar Producto</h1>
