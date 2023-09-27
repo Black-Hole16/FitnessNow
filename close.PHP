@@ -25,7 +25,7 @@ $hora = date('h:i:s');
  <h4> Sesion Finalizada |  
       Fecha: <?php echo $hoy;?>  |  
       Hora: <?php echo $hora;?>   |
-      <a href="session.PHP">Iniciar Sesion.</a>.
+      <a href="login/login-empl.html">Iniciar Sesion.</a>.
 </h4>
    </div>
     <!-- Aquí puedes mostrar el contenido de la página de inicio -->

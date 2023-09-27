@@ -67,7 +67,7 @@ header("Location: home-product.html");
 
 };
 
-}else{ echo "Usuario o contraseña incorrectos. <a href='login.html'target='_parent'>Volver a intentar</a>";  
+}else{ echo "Usuario o contraseña incorrectos. <a href='login/login-empl.html'target='_parent'>Volver a intentar</a>";  
  }
 ?>
 
