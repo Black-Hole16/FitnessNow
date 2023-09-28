@@ -49,7 +49,7 @@ $_SESSION['username'] = $usu;                              //variable de session
                         
 
 if ($perfil == 'Administrador') {   //comparar vector con datos
-header("Location: Admin.html");                             
+header("Location: Admin.php");                             
 }else{
 
 if ($perfil == 'Cajero') {   //comparar vector con datos

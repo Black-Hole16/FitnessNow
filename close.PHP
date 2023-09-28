@@ -10,15 +10,6 @@ $hora = date('h:i:s');
 ?>
 <html>
 <head> <title>Página Cerrar Sesion</title> </head>
- <style>
-        body {  background-image: url('fondo.jpg');
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color:#00ff00;
-                background-size: contain;  }
-    .div-1 {    background-color: #EBEBEB; }
-    .div-2 {  	background-color: #ABBAEA; }
-</style>
 </head>
 <body>
 <div class="div-1">

@@ -1,3 +1,15 @@
+<?php
+session_start(); 
+
+if (!isset($_SESSION['username'])) {
+    header('Location:../login/login-empl.html');
+    exit();
+}
+
+$username = $_SESSION['username'];
+$perfil = $_SESSION['perfil'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +20,8 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <iframe src="../menu.html" frameborder="0" width="100%" scrolling="no" height="100%"></iframe>
+    <a href="javascript:history.go(-1)"><img width="50px" height="50px" src="../assets/img/back.png" alt="Atras"></a>
      <form action="" method="post">
         <h1>Regristarse</h1>
         <input type="number" name="N1" placeholder="Codigo de usuario"required>
