@@ -41,10 +41,10 @@ $DB = new MySQL();
     <select name ="select1">
     <option></option>
 <?php
-   $consulta = $DB->consulta("SELECT * FROM usuario;");
+   $consulta = $DB->consulta("SELECT * FROM empleado;");
 while ($resultado = $DB->fetch_array($consulta)){
-    $AA=$resultado['codi_usua'];
-    $BB=$resultado['nomb_usua'];
+    $AA=$resultado['codi_empl'];
+    $BB=$resultado['nomb_empl'];
 echo "<option value='$AA'>$BB</option>";
 }
     ?>
@@ -54,7 +54,7 @@ echo "<option value='$AA'>$BB</option>";
 <?php
 if (isset ($_POST['Btn'])) {
     $id = $_POST['select1']; 
-    $consulta = $DB->consulta("SELECT * FROM usuario WHERE codi_usua =".$id.";");
+    $consulta = $DB->consulta("SELECT * FROM empleado WHERE codi_empl =".$id.";");
 if($DB->num_rows($consulta)>0){
     $resultados = $DB->fetch_array($consulta);
 ?>
@@ -84,7 +84,7 @@ if($DB->num_rows($consulta)>0){
 
 
     if(isset($_POST['Btn2'])){
-     $sqlmodifica = $DB->modifica("UPDATE `usuario` SET `codi_usua` = '$id', `nomb_usua` = '$NP', `cont_usua` = '$DP', `rol_usua` = '$PU' WHERE `usuario`.`codi_usua` = $id;");
+     $sqlmodifica = $DB->modifica("UPDATE `empleado` SET `codi_empl` = '$id', `nomb_empl` = '$NP', `tele_empl` = '$DP', `dire_empl` = '$PU' WHERE `empleado`.`codi_empl` = $id;");
         //echo $sqlmodifica;
         ?>
         <script>
@@ -93,14 +93,14 @@ if($DB->num_rows($consulta)>0){
         <?php
     }
     else{
-        $consulta =$DB->consulta("SELECT * FROM usuario WHERE codi_usua = $id");
+        $consulta =$DB->consulta("SELECT * FROM empleado WHERE codi_empl = $id");
         if($DB->num_rows($consulta)>0){
             $resultados = $DB->fetch_array($consulta);
 
             
         }
         if(isset($_POST['Btn2'])){
-            $sqlmodifica = $DB->modifica("UPDATE `usuario` SET `codi_usua` = '$id', `nomb_usua` = '$NP', `cont_usua` = '$DP', `rol_usua` = '$PU' WHERE `usuario`.`codi_usua` = $id;");
+            $sqlmodifica = $DB->modifica("UPDATE `empleado` SET `codi_empl` = '$id', `nomb_empl` = '$NP', `tele_empl`= '$DP', `dire_empl` = '$PU' WHERE `empleado`.`codi_empl` = $id;");
         }
     
         ?>

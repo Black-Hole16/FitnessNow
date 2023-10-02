@@ -38,7 +38,11 @@ $perfil = $_SESSION['perfil'];
             <option value="n/a">No aplica</option>
         </select>
         <br><br>
+        <label for="Fecha_NA">Fecha De Nacimiento</label><br>
         <input type="date" name="Fecha_NA">
+        <br><br>
+        <label for="Fecha_INGRE">Fecha De Ingreso</label><br>
+        <input type="date" name="Fecha_INGRE">
         <br><br>
         <input type="submit" value="Guardar" name="Btn">
      </form>
@@ -52,8 +56,10 @@ $perfil = $_SESSION['perfil'];
         $id = $_POST['N1']; $nombre = $_POST['Name'];
         $Direccion = $_POST['Adress']; $tel = $_POST['phone'];
         $Gen = $_POST['gen']; $Date = $_POST['Fecha_NA'];
+        $Date_INGRE = $_POST['Fecha_INGRE'];
+        
 
-        $sqlinsertar = $DB->inserta("insert into cliente values('$id','$nombre','$Direccion','$tel','$Gen','$Date');");
+        $sqlinsertar = $DB->inserta("insert into cliente values('$id','$nombre','$Direccion','$tel','$Gen','$Date','$Date_INGRE');");
         
     ?>      
         <script>

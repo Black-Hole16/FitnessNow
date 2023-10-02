@@ -28,7 +28,9 @@ $perfil = $_SESSION['perfil'];
         <input type="number" name="phone" required placeholder="Telefono de empleado">
         <br><br>
         <input type="text" name="Adress" placeholder="Direccion de empleado" required>
-        
+        <br><br>
+        <label for="Fecha_INGRE">Fecha De Ingreso</label><br>
+        <input type="date" name="Fecha_INGRE">
         <br><br>
         <input type="submit" value="Guardar" name="Btn">
      </form>
@@ -42,9 +44,9 @@ $perfil = $_SESSION['perfil'];
         $id = $_POST['N1']; $nombre = $_POST['Name'];
         $tel = $_POST['phone'];
         $Direccion = $_POST['Adress'];
-       
+        $Date_INGRE = $_POST['Fecha_INGRE'];
 
-        $sqlinsertar = $DB->inserta("insert into empleado values('$id','$nombre','$tel','$Direccion');");
+        $sqlinsertar = $DB->inserta("insert into empleado values('$id','$nombre','$tel','$Direccion','$Date_INGRE');");
     ?>      
         <script>
             alert("Save Succesfully");
