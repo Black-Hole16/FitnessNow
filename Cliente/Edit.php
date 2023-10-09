@@ -58,23 +58,30 @@ if (isset ($_POST['Btn'])) {
 if($DB->num_rows($consulta)>0){
     $resultados = $DB->fetch_array($consulta);
 ?>
-<form name="EDIT" action="Edit.php" method="post" enctype = "multipart/form-data">
+    <form name="EDIT" action="Edit.php" method="post" enctype="multipart/form-data">
     <br>
-    <input type="number" name="id_cli" value="<?php echo $resultados[0];?>" required>
+    <label for="id_clie">ID:</label>
+    <input type="number" name="id_clie" value="<?php echo $resultados[0];?>" required>
     <br><br>
-    <input type = "text" name="nomb_clie" value="<?php echo $resultados[1];?>" required>
+    <label for="nomb_clie">Nombre:</label>
+    <input type="text" name="nomb_clie" value="<?php echo $resultados[1];?>" required>
     <br><br>
-    <input type = "text" name="dire_clie" value="<?php echo $resultados[2];?>" required>
-    <input type = "text" name="tele_clie" value="<?php echo $resultados[3];?>" required>
-    <input type = "text" name="gen_clie" value="<?php echo $resultados[4];?>" required>
-    <input type = "text" name="fena_na" value="<?php echo $resultados[5];?>" required>
-    <input type = "text" name="fena_ing" value="<?php echo $resultados[6];?>" required>
+    <label for="dire_clie">Dirección:</label>
+    <input type="text" name="dire_clie" value="<?php echo $resultados[2];?>" required>
+    <label for="tele_clie">Teléfono:</label>
+    <input type="text" name="tele_clie" value="<?php echo $resultados[3];?>" required>
+    <label for="gen_clie">Género:</label>
+    <input type="text" name="gen_clie" value="<?php echo $resultados[4];?>" required>
+    <label for="fena_na">Fecha Nacimiento:</label>
+    <input type="text" name="fena_na" value="<?php echo $resultados[5];?>" required>
+    <label for="fena_ing">Fecha Ingreso:</label>
+    <input type="text" name="fena_ing" value="<?php echo $resultados[6];?>" required>
     <br><br>
     <input type="submit" value="Guardar" name="Btn2">
     
-    <input type= hidden name="select1" value="<?php echo $resultados[0];?>">
+    <input type="hidden" name="select1" value="<?php echo $resultados[0];?>">
+</form>
 
-</from>
 <?php
 }}
   if(isset($_POST['Btn2'])){
@@ -85,10 +92,11 @@ if($DB->num_rows($consulta)>0){
     $DP = $_POST['gen_clie'];
     $PU = $_POST['fena_na'];
     $SK = $_POST['fena_ing'];
+    $tel = $_POST['tele_clie'];
 
 
     if(isset($_POST['Btn2'])){
-     $sqlmodifica = $DB->modifica("UPDATE `cliente` SET `id_clie` = '$ID', `nomb_clie` = '$NC', `dire_clie` = '$NP', `fena_na` = '$PU' , '$SK' = 'fena_ing' WHERE `cliente`.`id_clie` = $id;");
+     $sqlmodifica = $DB->modifica("UPDATE `cliente` SET `id_clie` = '$ID', `nombre_clie` = '$NC', `dire_clie` = '$NP', `tele_clie` = '$tel', `gene_clie` = '$DP', `fena_clie` = '$PU', `fein_clie` = '$SK' WHERE `cliente`.`id_clie` = $ID ");
         //echo $sqlmodifica;
         ?>
         <script>
@@ -97,14 +105,14 @@ if($DB->num_rows($consulta)>0){
         <?php
     }
     else{
-        $consulta =$DB->consulta("SELECT * FROM cliente WHERE id_clie = $id");
+        $consulta =$DB->consulta("SELECT * FROM cliente WHERE id_clie = $ID");
         if($DB->num_rows($consulta)>0){
             $resultados = $DB->fetch_array($consulta);
 
             
         }
         if(isset($_POST['Btn2'])){
-            $sqlmodifica = $DB->modifica("UPDATE `cliente` SET `id_clie` = '$ID', `nomb_clie` = '$NC', `dire_clie` = '$NP', `fena_na` = '$PU' , '$SK' = 'fena_ing' WHERE `cliente`.`id_clie` = $id;");
+            $sqlmodifica = $DB->modifica("UPDATE `cliente` SET `id_clie` = '$ID', `nomb_clie` = '$NC', `dire_clie` = '$NP', `fena_na` = '$PU', `fein_clie` = '$SK' WHERE `cliente`.`id_clie` = '$ID'");
         }
     
         ?>

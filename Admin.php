@@ -26,7 +26,6 @@ $perfil = $_SESSION['perfil'];
     <li><a href="Producto/Edit.php"><img src="assets/img/edit.png" alt="Editar"><figcaption>Editar Inventario</figcaption></a></li>
     <li><a href="Producto/insert.php"><img src="assets/img/open-box.png" alt="Ingresar Producto"><figcaption>Regristar Ingreso</figcaption></a></li>
     <li><a href="Producto/Delete.php"><img src="assets/img/borrar.png" alt="Eliminar Producto"><figcaption>Eliminar Producto</figcaption></a></li>
-    <li><a href="Cliente/insert.php"><img src="assets/img/proveedor.png" alt="cliente"><figcaption>Cliente</figcaption></a></li>
     <li><a href="Usuario/insert.php"><img src="assets/img/agregar-usuario.png" alt="Agregar Usuario"><figcaption>Agregar Usuario</figcaption></a></li>
     <li><a href="Usuario/Delete.php"><img src="assets/img/delete-user.png" alt="Eliminar usuario"><figcaption> Eliminar Usuario</figcaption></a></li>
     <li><a href="Usuario/consultar.php"><img src="assets/img/user-search.png" alt="consultarusario"><figcaption>Consulta Usuario</figcaption></a></li>
