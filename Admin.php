@@ -34,10 +34,10 @@ $perfil = $_SESSION['perfil'];
     <li><a href="Empleado/consultar.php"><img src="assets/img/consul-empleado.png" alt="Consultar empleado"><figcaption>Consultar empleado</figcaption></a></li>
     <li><a href="Empleado/edit.php"><img src="assets/img/edit-empleado.png" alt="Editar empleado"><figcaption>Editar empleado</figcaption></a></li>
     <li><a href="Empleado/Delete.php"><img src="assets/img/delete-empleado.png" alt="Borrar empleado"><figcaption>Borrar empleado</figcaption></a></li>
-    <li><a href="cliente/edit.php"><img src="assets/img/delete-empleado.png" alt="Editar cliente"><figcaption>Editar cliente</figcaption></a></li>
-    <li><a href="cliente/consultar.php"><img src="assets/img/delete-empleado.png" alt="consutar cliente"><figcaption>consultar cliente</figcaption></a></li>
-    <li><a href="cliente/delete.php"><img src="assets/img/delete-empleado.png" alt="borrar cliente"><figcaption>borrar cliente</figcaption></a></li>
-    <li><a href="cliente/insert.php"><img src="assets/img/delete-empleado.png" alt="insertar cliente"><figcaption>insertar cliente</figcaption></a></li>
+    <li><a href="cliente/edit.php"><img src="assets/img/lapiz.png" alt="Editar cliente"><figcaption>Editar cliente</figcaption></a></li>
+    <li><a href="cliente/consultar.php"><img src="assets/img/lupa.png" alt="consutar cliente"><figcaption>consultar cliente</figcaption></a></li>
+    <li><a href="cliente/delete.php"><img src="assets/img/borrar2.png" alt="borrar cliente"><figcaption>borrar cliente</figcaption></a></li>
+    <li><a href="cliente/insert.php"><img src="assets/img/agregar.png" alt="insertar cliente"><figcaption>insertar cliente</figcaption></a></li>
   
   </ul>
 </nav>
